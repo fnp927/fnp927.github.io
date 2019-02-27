@@ -285,6 +285,158 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://fnp927.github.io/fnp927.github.io/2019/02/27/认识Mutal-TLS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/02/27/认识Mutal-TLS/" class="post-title-link" itemprop="url">认识Mutal TLS</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2019-02-27 11:03:29 / Modified: 11:05:28" itemprop="dateCreated datePublished" datetime="2019-02-27T11:03:29+08:00">2019-02-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Mutual-TLS的理解"><a href="#Mutual-TLS的理解" class="headerlink" title="Mutual TLS的理解"></a>Mutual TLS的理解</h2><blockquote>
+<p>由于特性开发要使用到MUtualTLS，我对MTS的所知基本为零，所以学习下进行总结。</p>
+</blockquote>
+<p>###什么是Mutal Authentication<br><strong>Mutual Authentication</strong>和<strong>two-way authentication</strong>一样指的是双方同时进行双向身份认证的手段。<br><strong>TLS(Transport Layer Security)</strong> 默认只单向提供服务器端的身份给客户端，而对客户端的认证一般基于应用层。</p>
+<h3 id="TLS握手协议"><a href="#TLS握手协议" class="headerlink" title="TLS握手协议"></a>TLS握手协议</h3><p>当你连入某个站点的时候，TLS握手协议将用于在客户端和服务器端通信和建立安全加密的信道。握手协议包含必须的和可选的信息</p>
+<h3 id="TLS-对服务器的身份验证"><a href="#TLS-对服务器的身份验证" class="headerlink" title="TLS:对服务器的身份验证"></a>TLS:对服务器的身份验证</h3><p>服务器端发送X.509证书给客户端，客户端通过某个预信任的根证书来验证服务器的身份。最终，客户端会得到真实的服务器身份，进而与服务器建立信任的通道。</p>
+<h3 id="Mutal-TLS：对于客户端进行验证"><a href="#Mutal-TLS：对于客户端进行验证" class="headerlink" title="Mutal TLS：对于客户端进行验证"></a>Mutal TLS：对于客户端进行验证</h3><p>由服务器发网客户端对TLS握手的证书<strong>需求</strong>信息并非必须的。这种认证需求信息包含服务端所信任的不同的根证书列表。这样就需要让客户端回应他自己的证书或者其他中间证书给服务器。<br>客户端将会把客户端证书信息传递给服务器端，这个信息包含其本身的证书链一直到某个服务器端支持的根证书。<br>一旦服务器端接收到了客户端发起的认证信息则开始单方面的验证，验证通过后这个客户端则是可以被服务器信任的客户端。</p>
+<blockquote>
+<p>这也只是很少的一部分概念解释，需要理解还要深究。</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://fnp927.github.io/fnp927.github.io/2019/02/27/MarkDown语法尝试/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -644,7 +796,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -661,7 +813,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">tags</span>
                   
                 </div>
